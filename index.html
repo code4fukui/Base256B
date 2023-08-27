@@ -1,0 +1,53 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><link rel="icon" href="data:">
+<title>Base256B braille-encode char map</title>
+</head><body>
+<h1>Base256B braille-encode char map</h1>
+<main id=main></main>
+
+<script type="module">
+import { Base256B } from "./Base256B.js";
+
+const cr = (tag, p) => {
+  const c = document.createElement(tag);
+  if (p) p.appendChild(c);
+  return c;
+};
+const tbl = cr("table", main);
+const tr = cr("tr", tbl);
+cr("th", tr);
+for (let i = 0; i < 16; i++) {
+  cr("th", tr).textContent = i.toString(16);
+}
+const b = new Uint8Array(1);
+for (let i = 0; i < 16; i++) {
+  const tr = cr("tr", tbl);
+  cr("th", tr).textContent = i.toString(16);
+  for (let j = 0; j < 16; j++) {
+    b[0] = (j << 4) | i;
+    cr("td", tr).textContent = Base256B.encode(b);
+  }
+}
+</script>
+
+<a href=https://github.com/code4fukui/Base256B/>src on GitHub</a>
+
+<style>
+body {
+  text-align: center;
+}
+table {
+  display: inline-block;
+  border-collapse: collapse;
+  margin: 1.2em 0;
+}
+td, th {
+  font-size: 200%;
+  margin: 0;
+  padding: 0 .5em;
+  border: 1px solid black;
+}
+a {
+  color: gray !important;
+}
+</style>
+</body></html>
