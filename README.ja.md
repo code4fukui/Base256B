@@ -1,15 +1,15 @@
 # Base256B
 
-Base256B is an ES module for [braille-encode](https://github.com/qntm/braille-encode/) by [qntn](https://github.com/qntm), providing 8-bit encoding with braille characters (0x2800-0x28FF in Unicode).
+Base256Bは[qntn](https://github.com/qntm)による[braille-encode](https://github.com/qntm/braille-encode/)のES modulesで、ブライユ文字(Unicode 0x2800-0x28FF)を使用した8ビットエンコーディングを提供します。
 
-## Features
+## 機能
 
-- Encode and decode binary data using braille characters
-- Aesthetically pleasing representation of SHA1 hashes
+- ブライユ文字を使ってバイナリデータの符号化・復号化
+- SHA1ハッシュの美しい表現
 
-## Usage
+## 使い方
 
-In your code:
+コード内で:
 
 ```javascript
 import { Base256B } from "https://code4fukui.github.io/Base256B/Base256B.js";
@@ -25,6 +25,6 @@ const encoded2 = Base256B.encode(key);
 console.log(encoded2); // ⢉⠶⠧⢢⡜⢈⠨⣗⢃⠇⡲⡙⠭⡤⡥⣁⡛⡘⣐⡢⣶⢠⠟⠛⠻⠔⠳⡀⠿⢧⡶⣠
 ```
 
-## License
+## ライセンス
 
 MIT License
