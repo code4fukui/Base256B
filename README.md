@@ -1,5 +1,7 @@
 # Base256B
 
+> 日本語のREADMEはこちらです: [README.ja.md](README.ja.md)
+
 Base256B is an ES module for [braille-encode](https://github.com/qntm/braille-encode/) by [qntn](https://github.com/qntm), providing 8-bit encoding with braille characters (0x2800-0x28FF in Unicode).
 
 ## Features
