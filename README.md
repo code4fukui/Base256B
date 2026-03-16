@@ -29,4 +29,4 @@ console.log(encoded2); // ⢉⠶⠧⢢⡜⢈⠨⣗⢃⠇⡲⡙⠭⡤⡥⣁⡛⡘
 
 ## License
 
-MIT License
+MIT License — see [LICENSE](LICENSE).
